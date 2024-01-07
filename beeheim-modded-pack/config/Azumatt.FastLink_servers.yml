@@ -1,0 +1,43 @@
+# Configure your servers for Azumatt's FastLink mod in this file.
+# Servers are automatically sorted alphabetically when shown in the list.
+# This file live updates the in-game listing. Feel free to change it while in the main menu.
+
+# Example Server:
+#   address: example.com
+#   port: 1234
+#   password: somepassword
+
+# Some IPv6 Server:
+#   address: 2606:2800:220:1:248:1893:25c8:1946
+#   port: 4023
+#   password: a password with spaces
+
+# Passwordless IPv4 Server:
+#   address: 93.184.216.34
+#   port: 9999
+
+# # You can optionally change the color of your server name. Does not work for the address and port. Also, can show PvP status.
+# <color=red>Another IPv4 Server</color>:
+#   address: 192.0.2.146
+#   port: 9999
+#   ispvp: true
+# # You can specify if a server is crossplay or not. This will show the crossplay's "Shuffle" icon. Please note, this is not fully supported at this time.
+# Crossplay Server:
+#   address: 92.183.211.42
+#   port: 9999
+#   password: somepassword
+#   iscrossplay: true
+#   ispvp: true
+# # You can specify if a server uses the whitelist for players or not. This will show in the tooltip only.
+# Whitelisted Server:
+#   address: 92.183.211.42
+#   port: 9999
+#   password: somepassword
+#   iscrossplay: true
+#   ispvp: true
+#   iswhitelisted: true
+
+<#FFF300>Beeheim Modded Server</color>: 
+  address: beeheim.buzz
+  port: 2411
+  password: potat

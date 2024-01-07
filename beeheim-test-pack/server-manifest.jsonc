@@ -1,0 +1,10 @@
+{
+  "name": "beeheim-test-server-manifest",
+  "version_number": "1.0.0",
+  "website_url": "https://github.com/thunderstore-io",
+  "description": "This is the server side plugins manifest for the Beeheim test server.",
+  "server-type": "bepinex", // bepinex | bepinex-full| vanilla | valheim-plus
+  "plugins": [ // list of thunderstore dependency ids.
+    
+  ]
+}

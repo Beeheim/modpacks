@@ -1,0 +1,67 @@
+# You can add your own texts here.
+# No, you cannot add your own categories.
+# Don't use very long texts.
+
+general:
+  - "{player} died an unspectacular death."
+  - "{player} has been promoted to 'dead player'!"
+
+death by fire:
+  - "{player} is now crispy."
+  - "{player} chose to be cremated."
+  - "{player} is a huge fan of the Human Torch."
+
+death by poison:
+  - "{player} had a tea party with Putin."
+  - "{player} turned brave, then green, then dead."
+
+death by frost:
+  - "{player} got turned into an icicle."
+  - "{player} will never complain about being hot again."
+
+death by lightning:
+  - "{player} is now thunderstruck."
+  - "{player} is now ash, thanks to a flash."
+  - "{player} got zapped. Brzzz!"
+
+death by elemental:
+  - "{player} challenged the elements and lost."
+
+death by tree:
+  - "{player} forgot to yell 'Timber!' and suffers the consequences now."
+  - "{player} fought the tree boss, but lost."
+
+death by pierce:
+  - "{player} met the superperforator: {enemy}!"
+  - "{player} got a new piercing. Or two. Or a hundred."
+
+death by slash:
+  - "{player} got sliced in two."
+  - "{player} died, even though it was just a flesh wound."
+
+death by blunt:
+  - "{player} got smacked on the head by {enemy}."
+  - "{player} looks smashing today."
+
+death by physical:
+  - "{player} challenged {enemy} and came in second."
+
+death by gravity:
+  - "{player} discovered gravity. Huzzah!"
+  - "{player} forgot to brake before landing."
+
+death by drowning:
+  - "{player} is no longer thirsty."
+  - "{player} wants to be a fish, apparently."
+  - "{player} lives in a pineapple under the sea now."
+
+death by player:
+  - "{player} wanted to hug {enemy} and found death instead."
+  - "{player} wanted to make new friends, but got disappointed."
+
+death by creature:
+  - "{player} is more dead than a Draugr now, thanks to {enemy}."
+
+death by boss:
+  - "{player} learned that {enemy} is the boss around here."
+  - "{player} tried to boss around {enemy} and paid the price."

@@ -1,0 +1,10 @@
+{
+  "name": "beeheim-mutant-server-manifest",
+  "version_number": "1.0.0",
+  "website_url": "https://github.com/thunderstore-io",
+  "description": "This is the server side plugins manifest for the Beeheim Mutant Community server.",
+  "server-type": "bepinex", // bepinex | bepinex-full| vanilla | valheim-plus
+  "plugins": [ // list of thunderstore dependency ids.
+    
+  ]
+}
