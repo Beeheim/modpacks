@@ -3,8 +3,11 @@ const axios = require('axios');
 const rateLimit = require('axios-rate-limit');
 const chalk = require('chalk');
 
+const package = 'https://valheim.thunderstore.io/api/experimental/package';
+const index = 'https://valheim.thunderstore.io/api/experimental/package-index'; // very large index. 160k entries;
 
 
+// We can request 
 
 async function parseDeps() {
     let parsedDependencies = [];
@@ -21,7 +24,7 @@ async function parseDeps() {
                 console.log(chalk.red(`Error: Bad entry, parts.length too short\n${parts}`))
             }
         });
-        return parsedDependencies;
+      return parsedDependencies;
     } else {
         console.error(chalk.red(`Dependencies must be an array of strings`));
     }
@@ -41,7 +44,8 @@ async function processDependencies(deps) {
     }
     for (const mod of deps) {
         try {
-            const response = await thunderstore.get(`https://valheim.thunderstore.io/api/experimental/package/${mod.author}/${mod.package}/`, {
+            const response = await thunderstore.get(
+        `${package}/${mod.author}/${mod.package}/`, {
                 headers: {
                     'Accept': 'application/json'
                 }
