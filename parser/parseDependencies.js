@@ -2,12 +2,12 @@ const { dependencies } = require('../vanilla-plus/optional-pack/manifest.json');
 const axios = require('axios');
 const rateLimit = require('axios-rate-limit');
 const chalk = require('chalk');
+const zlib = require('zlib');
 
-const package = 'https://valheim.thunderstore.io/api/experimental/package';
+const package = 'https://valheim.thunderstore.io/api/experimental/package'; // This is the url for a single package
 const index = 'https://valheim.thunderstore.io/api/experimental/package-index'; // very large index. 160k entries;
 
 
-// We can request 
 
 async function parseDeps() {
     let parsedDependencies = [];
@@ -30,7 +30,27 @@ async function parseDeps() {
     }
 }
 
-
+async function fetchIndex(indexUrl) {
+    const thunderstore = rateLimit(axios.create(), { maxRequests: 1, perMilliseconds: 1000 });
+    const oneminute = 60000
+    let response = await thunderstore.get(indexUrl, {
+    respondeType: 'arraybuffer'
+    })
+    .then(res => {
+      zlib.gunzip(res.data, (err, decompressed) => {
+        if (err) {
+          console.log(chalk.red(`Error: ${err}`));
+        } else {
+          response = JSON.parse(decompressed.toString('utf8'));
+        }
+      });
+    })
+    .catch(error => {
+      console.error(error);
+    });
+  console.log(chalk.green(`Index fetched, ${response.data.length} entries`));
+  return response;
+}
 
 async function processDependencies(deps) {
     const delay = ms => new Promise(res => setTimeout(res, ms));
@@ -66,8 +86,8 @@ async function processDependencies(deps) {
     }
 }
 
-parseDeps().then(processDependencies);
-
+//parseDeps().then(processDependencies);
+fetchIndex(index);
 
 
 // parsedDependencies.forEach(mod => {
