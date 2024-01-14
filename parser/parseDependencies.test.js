@@ -3,7 +3,7 @@ const rateLimit = require('axios-rate-limit');
 const fetchIndex = require('./parseDependencies.js');
 const fs = require('fs');
 
-const expectedIndexDataPath = './test/expectedData.txt';
+const expectedIndexDataPath = './testdata/expectedData.txt';
 
 const expectedIndexDataString = fs.readFileSync(expectedIndexDataPath, 'utf8');
 
