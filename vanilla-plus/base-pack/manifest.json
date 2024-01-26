@@ -1,11 +1,11 @@
 {
-    "name": "Beeheim_Vanilla_Plus_Base",
-    "version_number": "0.0.3",
+    "name": "Beeheim_Vanilla_Plus_S2",
+    "version_number": "0.0.1",
     "website_url": "https://discord.gg/beh77TKAQg",
-    "description": "Official whitelist modpack for the Beeheim is Happy community",
+    "description": "Official whitelist modpack for the Beeheim is Happy community\nGreylisted Mods:\nMod: BepInExPack_Valheim, Ver: 5.4.2202, Mod: AzuCraftyBoxes, Ver: 1.2.7, Mod: BetterChat, Ver: 1.4.9, Mod: AzuExtendedPlayerInventory, Ver: 1.3.8, Mod: Groups, Ver: 1.2.6, Mod: Gizmo, Ver: 1.9.0, Mod: AAA_Crafting, Ver: 1.3.4, Mod: Quick_Stack_Store_Sort_Trash_Restock, Ver: 1.4.5, Mod: AzuClock, Ver: 1.0.2, Mod: HookGenPatcher, Ver: 0.0.4, Mod: InteractWhileBuilding, Ver: 1.0.0, Mod: Build_Camera_Custom_Hammers_Edition, Ver: 1.2.2, Mod: BetterUI_ForeverMaintained, Ver: 2.5.4, Mod: ImmersiveCompass, Ver: 1.4.1, Mod: EmoteWheel, Ver: 1.4.1, Mod: Minimal_UI, Ver: 2.3.0",
     "dependencies": [
         "denikson-BepInExPack_Valheim-5.4.2202",
-        "ValheimModding-Jotunn-2.16.1",
+        "ValheimModding-Jotunn-2.16.2",
         "blacks7ar-BoatAdditions-1.2.4",
         "Smoothbrain-Groups-1.2.6",
         "MSchmoecker-MultiUserChest-0.5.6",
@@ -13,16 +13,17 @@
         "VentureValheim-World_Advancement_Progression-0.2.7",
         "CW_Jesse-BetterNetworking_Valheim-2.3.2",
         "Smoothbrain-ServerCharacters-1.4.11",
-        "Azumatt-WardIsLove-3.5.0",
+        "Azumatt-WardIsLove-3.5.1",
         "VentureValheim-Venture_Location_Reset-0.7.0",
         "Azumatt-Where_You_At-1.0.9",
         "Azumatt-FastLink-1.4.0",
         "JereKuusela-Item_Stand_All_Items-1.20.0",
-        "RagnarokHCRP-MoreGates-1.0.11",
         "KGvalheim-Marketplace_And_Server_NPCs_Revamped-9.2.2",
         "Smoothbrain-DarwinAwards-1.0.6",
         "Smoothbrain-TombstoneLock-1.0.7",
         "KGvalheim-Marketplace_NPC_Models-1.0.0",
-        "Azumatt-AzuExtendedPlayerInventory-1.3.8"
+        "Azumatt-AzuExtendedPlayerInventory-1.3.8",
+        "MerryValheimMods-NoStumps-1.0.0",
+        "Pineapple-MoreGates-1.0.11"
         ]
 }

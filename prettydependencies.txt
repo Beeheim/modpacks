@@ -1,25 +1,13 @@
-# Changelog
-
-All notable changes to this project will be documented in this file.
-
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
-
-## [0.0.1] - 2024-01-26
-
-### Added
-
-#### Mandatory
-
-
-
-#### Greylist
-
+ - Mod: BepInExPack_Valheim, Ver: 5.4.2202
  - Mod: AzuCraftyBoxes, Ver: 1.2.7
+ - Mod: BetterChat, Ver: 1.4.9
  - Mod: AzuExtendedPlayerInventory, Ver: 1.3.8
+ - Mod: Groups, Ver: 1.2.6
  - Mod: Gizmo, Ver: 1.9.0
  - Mod: AAA_Crafting, Ver: 1.3.4
  - Mod: Quick_Stack_Store_Sort_Trash_Restock, Ver: 1.4.5
  - Mod: AzuClock, Ver: 1.0.2
+ - Mod: HookGenPatcher, Ver: 0.0.4
  - Mod: InteractWhileBuilding, Ver: 1.0.0
  - Mod: Build_Camera_Custom_Hammers_Edition, Ver: 1.2.2
  - Mod: BetterUI_ForeverMaintained, Ver: 2.5.4
