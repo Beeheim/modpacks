@@ -20,7 +20,7 @@ pretty_print_dependencies() {
   local input_file=$1
   while IFS='-' read -rA ADDR || [[ -n "${ADDR[*]}" ]]; do
     if [[ ${#ADDR[@]} -ge 3 ]]; then
-      echo " - Mod: ${ADDR[2]}, Ver: ${ADDR[3]}"
+      echo " - *Mod:* \`${ADDR[2]}\`, *Ver:* \`${ADDR[3]}\`"
     fi
   done <"$input_file"
 }
