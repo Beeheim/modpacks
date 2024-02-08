@@ -43,11 +43,11 @@ pretty_print_dependencies() {
 main() {
   local arg=$1
   if [[ "$arg" == "json" ]]; then
-    json_dependencies $2
+    json_dependencies $2 > dependencies.json
   elif [[ "$arg" == "pretty" ]]; then
-    pretty_print_dependencies $2
+    pretty_print_dependencies $2 > dependencies.md
   elif [[ "$arg" == "url" ]]; then
-    build_download_url $2
+    build_download_url $2 > urls.md
   elif [[ "$arg" == "all" ]]; then
     build_download_url $2 > urls.md
     json_dependencies $2 > dependencies.json
