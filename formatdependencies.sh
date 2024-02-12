@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-json_dependencies() {
+convert_to_json_array() {
   local input_file=$1
   local last_line=$(tail -n 1 "$input_file")
   local str="[\n"
@@ -18,7 +18,7 @@ json_dependencies() {
   echo $str
 }
 
-build_download_url() {
+generate_markdown_links() {
   local md_output=$(mktemp)
   local input_file=$1
   local base_url="https://valheim.thunderstore.io/package/"
@@ -30,7 +30,7 @@ build_download_url() {
       mod_title="${mod_title%%-*}"
       local mod_version="${line##*-}"
       local url="${base_url}${author}/${mod_title}/${mod_version}/"
-      local msg="- [${mod_title} Ver ${mod_version}](<${url}>)"
+      local msg="- [${mod_title} Ver ${mod_version}](${url})"
       printf '%s\n' "$msg" >> "$md_output"
     fi
   done <"$input_file"
@@ -38,7 +38,7 @@ build_download_url() {
   rm "$md_output"
 }
 
-pretty_print_dependencies() {
+generate_markdown_list() {
   local input_file=$1
   while IFS='-' read -r line || [[ -n "$line" ]]; do
     line=$(echo "$line" | tr -d '\r') # Remove carriage return characters
@@ -54,15 +54,15 @@ pretty_print_dependencies() {
 main() {
   local arg=$1
   if [[ "$arg" == "json" ]]; then
-    json_dependencies $2 >& dependencies.json
+    convert_to_json_array $2 >& array.json
   elif [[ "$arg" == "pretty" ]]; then
-    pretty_print_dependencies $2 > dependencies.md
+    generate_markdown_list $2 > list.md
   elif [[ "$arg" == "url" ]]; then
-    build_download_url $2 > urls.md
+    generate_markdown_links $2 > urls.md
   elif [[ "$arg" == "all" ]]; then
-    build_download_url $2 >& urls.md
-    json_dependencies $2 >& dependencies.json
-    pretty_print_dependencies $2 >& dependencies.md
+    generate_markdown_links $2 > urls.md
+    convert_to_json_array $2 > array.json
+    generate_markdown_list $2 > list.md
   fi
 }
 

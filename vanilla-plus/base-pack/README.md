@@ -31,7 +31,6 @@ Official base modpack for the Beeheim Vanilla Plus Server
 ### Greylist
 
 - [AzuCraftyBoxes](<https://valheim.thunderstore.io/package/Azumatt/AzuCraftyBoxes/1.2.9/>)
-- [AzuExtendedPlayerInventory](<https://valheim.thunderstore.io/package/Azumatt/AzuExtendedPlayerInventory/1.3.10/>)
 - [Gizmo](<https://valheim.thunderstore.io/package/ComfyMods/Gizmo/1.9.0/>)
 - [AAA_Crafting](<https://valheim.thunderstore.io/package/Azumatt/AAA_Crafting/1.3.4/>)
 - [Quick_Stack_Store_Sort_Trash_Restock](<https://valheim.thunderstore.io/package/Goldenrevolver/Quick_Stack_Store_Sort_Trash_Restock/1.4.5/>)
