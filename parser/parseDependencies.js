@@ -114,6 +114,6 @@ async function fetchDependencies(deps) {
 }
 
 
-fetchIndex(indexUrl);
+// fetchIndex(indexUrl);
 
 
