@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 convert_to_json_array() {
   local input_file=$1

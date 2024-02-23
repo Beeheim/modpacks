@@ -1,6 +1,7 @@
 dist
 parser/node_modules
 parser/testdata/*
-/urls.md
-/dependencies.md
-/dependencies.json
+urls.md
+list.md
+array.json
+
