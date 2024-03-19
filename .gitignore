@@ -4,3 +4,5 @@ parser/testdata/*
 /urls.md
 /dependencies.md
 /dependencies.json
+list.md
+array.json
