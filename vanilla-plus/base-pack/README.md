@@ -7,10 +7,10 @@ Official base modpack for the Beeheim Vanilla Plus Server
 ### Mandatory
 
 - [BepInExPack_Valheim Ver 5.4.2202](https://valheim.thunderstore.io/package/denikson/BepInExPack_Valheim/5.4.2202/)
-- [Jotunn Ver 2.17.0](https://valheim.thunderstore.io/package/ValheimModding/Jotunn/2.17.0/)
+- [Jotunn Ver 2.18.0](https://valheim.thunderstore.io/package/ValheimModding/Jotunn/2.18.0/)
 - [BoatAdditions Ver 1.2.4](https://valheim.thunderstore.io/package/blacks7ar/BoatAdditions/1.2.4/)
 - [Groups Ver 1.2.6](https://valheim.thunderstore.io/package/Smoothbrain/Groups/1.2.6/)
-- [MultiUserChest Ver 0.5.7](https://valheim.thunderstore.io/package/MSchmoecker/MultiUserChest/0.5.7/)
+- [MultiUserChest Ver 0.5.10](https://valheim.thunderstore.io/package/MSchmoecker/MultiUserChest/0.5.10/)
 - [AzuAntiCheat Ver 4.3.2](https://valheim.thunderstore.io/package/Azumatt/AzuAntiCheat/4.3.2/)
 - [World_Advancement_Progression Ver 0.2.8](https://valheim.thunderstore.io/package/VentureValheim/World_Advancement_Progression/0.2.8/)
 - [BetterNetworking_Valheim Ver 2.3.2](https://valheim.thunderstore.io/package/CW_Jesse/BetterNetworking_Valheim/2.3.2/)
@@ -31,16 +31,18 @@ Official base modpack for the Beeheim Vanilla Plus Server
 
 ### Greylist
 
+- [BepInExPack_Valheim Ver 5.4.2202](https://valheim.thunderstore.io/package/denikson/BepInExPack_Valheim/5.4.2202/)
 - [AzuCraftyBoxes Ver 1.2.9](https://valheim.thunderstore.io/package/Azumatt/AzuCraftyBoxes/1.2.9/)
+- [AzuExtendedPlayerInventory Ver 1.3.12](https://valheim.thunderstore.io/package/Azumatt/AzuExtendedPlayerInventory/1.3.12/)
 - [Gizmo Ver 1.9.0](https://valheim.thunderstore.io/package/ComfyMods/Gizmo/1.9.0/)
 - [AAA_Crafting Ver 1.3.4](https://valheim.thunderstore.io/package/Azumatt/AAA_Crafting/1.3.4/)
-- [Quick_Stack_Store_Sort_Trash_Restock Ver 1.4.5](https://valheim.thunderstore.io/package/Goldenrevolver/Quick_Stack_Store_Sort_Trash_Restock/1.4.5/)
+- [Quick_Stack_Store_Sort_Trash_Restock Ver 1.4.7](https://valheim.thunderstore.io/package/Goldenrevolver/Quick_Stack_Store_Sort_Trash_Restock/1.4.7/)
 - [AzuClock Ver 1.0.2](https://valheim.thunderstore.io/package/Azumatt/AzuClock/1.0.2/)
 - [InteractWhileBuilding Ver 1.0.0](https://valheim.thunderstore.io/package/tonsit/InteractWhileBuilding/1.0.0/)
 - [Build_Camera_Custom_Hammers_Edition Ver 1.2.2](https://valheim.thunderstore.io/package/Azumatt/Build_Camera_Custom_Hammers_Edition/1.2.2/)
-- [BetterUI_ForeverMaintained Ver 2.5.4](https://valheim.thunderstore.io/package/BetterUI_ForeverMaintained/BetterUI_ForeverMaintained/2.5.4/)
+- [BetterUI_ForeverMaintained Ver 2.5.5](https://valheim.thunderstore.io/package/BetterUI_ForeverMaintained/BetterUI_ForeverMaintained/2.5.5/)
 - [Minimal_UI Ver 2.3.0](https://valheim.thunderstore.io/package/Azumatt/Minimal_UI/2.3.0/)
-- [HUDCompass Ver 1.0.2](https://valheim.thunderstore.io/package/Neobotics/HUDCompass/1.0.2/)
+- [HUDCompass Ver 1.0.5](https://valheim.thunderstore.io/package/Neobotics/HUDCompass/1.0.5/)
 - [FarmGrid Ver 0.5.0](https://valheim.thunderstore.io/package/SarcenNexusMods/FarmGrid/0.5.0/)
 - [NoHoeDust Ver 1.0.4](https://valheim.thunderstore.io/package/Azumatt/NoHoeDust/1.0.4/)
 - [NoCultivatorDust Ver 1.0.4](https://valheim.thunderstore.io/package/Azumatt/NoCultivatorDust/1.0.4/)

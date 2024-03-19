@@ -1,8 +1,8 @@
 denikson-BepInExPack_Valheim-5.4.2202
-ValheimModding-Jotunn-2.17.0
+ValheimModding-Jotunn-2.18.0
 blacks7ar-BoatAdditions-1.2.4
 Smoothbrain-Groups-1.2.6
-MSchmoecker-MultiUserChest-0.5.7
+MSchmoecker-MultiUserChest-0.5.10
 Azumatt-AzuAntiCheat-4.3.2
 VentureValheim-World_Advancement_Progression-0.2.8
 CW_Jesse-BetterNetworking_Valheim-2.3.2
