@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: vimtor/action-zip@v1.2
         with:
-          files: vanilla-plus/
+          files: vanilla-plus/base-pack/
           dest: modpack.zip
 
       - name: Extract name from manifest
