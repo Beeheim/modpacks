@@ -7,7 +7,6 @@ on:
 
 jobs:
   publish:
-    secrets: inherit
     runs-on: ubuntu-latest
     steps:
       # Use checkout to publish the files in your repo
@@ -29,3 +28,5 @@ jobs:
           file: modpack.zip
           categories: | # <-- notice this pipe character
             modpacks
+        secrets: inherit
+
