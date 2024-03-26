@@ -19,7 +19,7 @@ jobs:
       - uses: GreenTF/upload-thunderstore-package@v4.2
         with:
           namespace: Beeheim # the thunderstore 'team' to publish under
-          description: ${{ github.event.release.body } 
+          description: ${{ github.event.release.body }}
           token: ${{ secrets.THUNDERSTORE_TOKEN }}
           name: test # the name of the package
           version: ${{ github.ref_name }} # Use the tag as the package version
