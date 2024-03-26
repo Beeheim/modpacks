@@ -17,6 +17,7 @@ jobs:
           dest: modpack.zip
 
       - uses: GreenTF/upload-thunderstore-package@v4.2
+        secrets: inherit
         with:
           namespace: Beeheim # the thunderstore 'team' to publish under
           description: ${{ github.event.release.body }}
@@ -28,5 +29,4 @@ jobs:
           file: modpack.zip
           categories: | # <-- notice this pipe character
             modpacks
-        secrets: inherit
 
