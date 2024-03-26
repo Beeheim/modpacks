@@ -28,13 +28,18 @@ jobs:
         id: get_modpack_name
         run: echo "name=${{ steps.extract_modpack_name.outputs.value }}" >> $GITHUB_OUTPUT
 
+      - name: Strip 'v' from version tag
+        id: strip_version
+        run: |
+            echo "version=$(echo ${{ github.event.release.tag_name }} | sed 's/v//')" >> $GITHUB_OUTPUT
+
       - uses: GreenTF/upload-thunderstore-package@v4.2
         with:
           namespace: Beeheim # the thunderstore 'team' to publish under
           description: ${{ github.event.release.body }}
           token: ${{ secrets.THUNDERSTORE_TOKEN }}
           name: ${{ steps.get_modpack_name.outputs.name }} # the name of the package
-          version: ${{ github.ref_name }} # Use the tag as the package version
+          version:  ${{ steps.strip_version.outputs.version }}# Use the tag as the package version
           community: Valheim # the game the package is for
 #          repo: valheim.thunderstore.io
           file: modpack.zip
