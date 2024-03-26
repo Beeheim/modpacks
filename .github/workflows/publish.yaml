@@ -18,16 +18,22 @@ jobs:
           files: vanilla-plus/
           dest: modpack.zip
 
-      - name: Get modpack name
+      - name: Extract version from package.json
+        uses: sergeysova/jq-action@v2
+        id: extract_modpack_name
+        with:
+          cmd: 'jq .name vanilla-plus/base-pack/manifest.json -r'
+      
+      - name: Save modpack name in github output
         id: get_modpack_name
-        run:  scripts/extract_modpack_name.sh
+        run: echo "name=${{ steps.extract_modpack_name.outputs.value }}" >> $GITHUB_OUTPUT
 
       - uses: GreenTF/upload-thunderstore-package@v4.2
         with:
           namespace: Beeheim # the thunderstore 'team' to publish under
           description: ${{ github.event.release.body }}
           token: ${{ secrets.THUNDERSTORE_TOKEN }}
-          name: ${{ steps.get_modpack_name.outputs.Name }} # the name of the package
+          name: ${{ steps.get_modpack_name.outputs.name }} # the name of the package
           version: ${{ github.ref_name }} # Use the tag as the package version
           community: Valheim # the game the package is for
           repo: valheim.thunderstore.io
