@@ -35,10 +35,9 @@ jobs:
 
       - name: Update version in manifest
         run: |
-          jq '.version = ${{ github.ref_name}}' vanilla-plus/base-pack/manifest.json > temp.json
+          jq '.version = ${{ steps.strip_version.outputs.version }}' vanilla-plus/base-pack/manifest.json > temp.json
           mv temp.json vanilla-plus/base-pack/manifest.json
-        env:
-          version: ${{ steps.strip_version.outputs.version }}
+  
 
       - uses: GreenTF/upload-thunderstore-package@v4.2
         with:
