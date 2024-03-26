@@ -36,7 +36,7 @@ jobs:
           name: ${{ steps.get_modpack_name.outputs.name }} # the name of the package
           version: ${{ github.ref_name }} # Use the tag as the package version
           community: Valheim # the game the package is for
-          repo: valheim.thunderstore.io
+#          repo: valheim.thunderstore.io
           file: modpack.zip
           categories: | # <-- notice this pipe character
             modpacks
