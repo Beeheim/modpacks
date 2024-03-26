@@ -13,10 +13,6 @@ jobs:
     steps:
       # Use checkout to publish the files in your repo
       - uses: actions/checkout@v4
-      - uses: vimtor/action-zip@v1.2
-        with:
-          files: vanilla-plus/base-pack/
-          dest: modpack.zip
 
       - name: Extract name from manifest
         uses: sergeysova/jq-action@v2
@@ -39,10 +35,21 @@ jobs:
           mv temp.json vanilla-plus/base-pack/manifest.json
           cat vanilla-plus/base-pack/manifest.json
 
+      - name: Get modpack description
+        id: get_modpack_description
+        run: |
+          description=$(jq -r '.description' vanilla-plus/base-pack/manifest.json)
+          echo "description=${description}" >> $GITHUB_OUTPUT      
+
+      - uses: vimtor/action-zip@v1.2
+        with:
+          files: vanilla-plus/base-pack/
+          dest: modpack.zip
+
       - uses: GreenTF/upload-thunderstore-package@v4.2
         with:
           namespace: Beeheim # the thunderstore 'team' to publish under
-          description: ${{ github.event.release.body }}
+          description: ${{ steps.get_modpack_description.outputs.description }}
           token: ${{ secrets.THUNDERSTORE_TOKEN }}
           name: ${{ steps.get_modpack_name.outputs.name }} # the name of the package
           version:  ${{ steps.strip_version.outputs.version }}
