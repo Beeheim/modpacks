@@ -40,8 +40,8 @@ jobs:
           token: ${{ secrets.THUNDERSTORE_TOKEN }}
           name: ${{ steps.get_modpack_name.outputs.name }} # the name of the package
           version:  ${{ steps.strip_version.outputs.version }}
-          community: Valheim # the game the package is for
-          repo: thunderstore.io/c/valheim # the repo to publish to
+          community: valheim # the game the package is for
+          repo: thunderstore.io
           file: modpack.zip
           categories: | # <-- notice this pipe character
             modpacks
