@@ -39,7 +39,7 @@ jobs:
           description: ${{ github.event.release.body }}
           token: ${{ secrets.THUNDERSTORE_TOKEN }}
           name: ${{ steps.get_modpack_name.outputs.name }} # the name of the package
-          version:  ${{ steps.strip_version.outputs.version }}# Use the tag as the package version
+          version:  ${{ steps.strip_version.outputs.version }}
           community: Valheim # the game the package is for
 #          repo: valheim.thunderstore.io
           file: modpack.zip
