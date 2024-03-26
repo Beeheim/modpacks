@@ -1,0 +1,55 @@
+name: Publish Mod
+
+# Run when a new release is... released
+on: 
+  release:
+    types: [published]
+
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      # Use checkout to publish the files in your repo
+      - uses: actions/checkout@v4
+      - uses: vimtor/action-zip@v1.2
+        with:
+          files: vanilla-plus/base-pack/
+          dest: modpack.zip
+
+      - name: Extract name from manifest
+        uses: sergeysova/jq-action@v2
+        id: extract_modpack_name
+        with:
+          cmd: 'jq .name vanilla-plus/base-pack/manifest.json -r'
+      
+      - name: Save modpack name in github output
+        id: get_modpack_name
+        run: echo "name=${{ steps.extract_modpack_name.outputs.value }}" >> $GITHUB_OUTPUT
+
+      - name: Strip 'v' from version tag
+        id: strip_version
+        run: |
+            echo "version=$(echo ${{ github.event.release.tag_name }} | sed 's/v//')" >> $GITHUB_OUTPUT
+
+      - name: Update version in manifest
+        run: |
+          jq '.version_number = "${{ steps.strip_version.outputs.version }}"' vanilla-plus/base-pack/manifest.json > temp.json
+          mv temp.json vanilla-plus/base-pack/manifest.json
+          cat vanilla-plus/base-pack/manifest.json
+
+      - uses: GreenTF/upload-thunderstore-package@v4.2
+        with:
+          namespace: Beeheim # the thunderstore 'team' to publish under
+          description: ${{ github.event.release.body }}
+          token: ${{ secrets.THUNDERSTORE_TOKEN }}
+          name: ${{ steps.get_modpack_name.outputs.name }} # the name of the package
+          version:  ${{ steps.strip_version.outputs.version }}
+          community: valheim # the game the package is for
+          repo: thunderstore.io
+          file: modpack.zip
+          categories: | # <-- notice this pipe character
+            modpacks
+
+
