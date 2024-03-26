@@ -35,7 +35,7 @@ jobs:
 
       - name: Update version in manifest
         run: |
-          jq '.version = ${{ steps.strip_version.outputs.version }}' vanilla-plus/base-pack/manifest.json > temp.json
+          jq '.version = "${{ steps.strip_version.outputs.version }}"' vanilla-plus/base-pack/manifest.json > temp.json
           mv temp.json vanilla-plus/base-pack/manifest.json
   
 
